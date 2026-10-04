@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17.11
+    container_name: db-lab1-postgres
+    env_file:
+      - ../.local/lab1_postgres.env
+    ports:
+      - "127.0.0.1:5433:5432"
+    command: ["postgres", "-c", "timezone=Europe/Moscow"]
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "lab1_user", "-d", "clinic_lab1"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:
+    name: db-lab1-pgdata
