@@ -122,7 +122,7 @@ BEGIN
 
     RETURN NEW;
 END;
-$$;ц
+$$;
 
 CREATE TRIGGER doctors_prevent_used_specialty_change
 BEFORE UPDATE OF specialty_id
