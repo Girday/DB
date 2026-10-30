@@ -1,0 +1,4 @@
+specialty_id,specialty,appointment_count,completed_count,cancelled_count,scheduled_count,completed_amount,average_completed_price,cancellation_percent
+1,Терапия,29,13,1,15,14400.00,1107.69,3.45
+2,Офтальмология,27,14,0,13,11800.00,842.86,0.00
+3,Неврология,24,7,12,5,7500.00,1071.43,50.00
